@@ -1,0 +1,133 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Share Tech Mono', monospace;
+  background: #0d0d0d;
+  color: #e0e0e0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Lados diagonais */
+.lado {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+}
+
+.lado.dev {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Espaço para imagens de fundo */
+.redes {
+  background-image: url("./img/rdc.jpg");
+}
+
+.dev {
+  background-image: url("./img/ds.jpg");
+}
+
+/* Overlay */
+.overlay {
+  background: rgba(0, 0, 0, 0.932);
+  padding: 25px 30px;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+/* ================== ESTILOS INDIVIDUAIS ================== */
+
+/* --- Azul para Redes --- */
+.redes .overlay {
+  border-left: 3px solid #4fc3f7;
+}
+.redes h1 {
+  color: #4fc3f7;
+}
+.redes h2 {
+  color: #81d4fa;
+}
+.redes ul li a {
+  border: 1px solid #4fc3f7;
+}
+.redes ul li a:hover {
+  background: #4fc3f7;
+  color: #000;
+}
+
+/* --- Vermelho para Desenvolvimento --- */
+.dev .overlay {
+  border-left: 3px solid #ff7043;
+}
+.dev h1 {
+  color: #ff7043;
+}
+.dev h2 {
+  color: #ffab91;
+}
+.dev ul li a {
+  border: 1px solid #ff7043;
+}
+.dev ul li a:hover {
+  background: #ff7043;
+  color: #000;
+}
+
+/* ========================================================= */
+
+/* Listas */
+ul {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+ul li {
+  margin: 6px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+/* ----- EFEITO DE HOVER ----- */
+.redes:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  z-index: 2;
+}
+.redes:hover ~ .dev {
+  filter: brightness(0.5);
+}
+
+.dev:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  z-index: 2;
+}
+.container:hover .redes:not(:hover) {
+  filter: brightness(0.5);
+}
