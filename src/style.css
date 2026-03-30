@@ -7,18 +7,83 @@
 
 html, body {
   height: 100%;
-  font-family: 'Share Tech Mono', monospace;
-  background: #0d0d0d;
-  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  overflow: hidden;
+}
+
+/* HEADER ESTILO VS CODE */
+.game-header {
+  background: #2d2d2d;
+  border-bottom: 1px solid #3e3e42;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #569cd6;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header-subtitle {
+  font-size: 0.9em;
+  color: #858585;
+  margin: 0;
+}
+
+.header-line {
+  display: none;
+}
+
+.header-instruction {
+  font-size: 0.85em;
+  color: #7cb342;
+  margin: 0;
+  margin-left: auto;
+  font-style: italic;
 }
 
 .container {
   display: flex;
-  height: 100vh;
+  flex-direction: row;
+  height: calc(100vh - 60px);
   overflow: hidden;
 }
 
-/* Lados diagonais */
+/* Seções */
+.secao {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow: hidden;
+}
+
+.secao.superior {
+  flex: 1;
+}
+
+.secao.inferior {
+  flex: 1;
+}
+
+/* Cartão de Curso */
 .lado {
   flex: 1;
   position: relative;
@@ -26,108 +91,369 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: left;
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-  background-color: #1a1a1a;
-  background-size: cover;
-  background-position: center;
-  transition: all 0.5s ease;
+  background: #1e1e1e;
+  border: 1px solid #3e3e42;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  padding: 15px;
 }
 
-.lado.dev {
-  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+.lado:hover {
+  background: #252526;
+  border-color: #007acc;
+  box-shadow: inset 0 0 10px rgba(0, 122, 204, 0.1);
 }
 
-/* Espaço para imagens de fundo */
-.redes {
-  background-image: url("./img/rdc.jpg");
-}
-
-.dev {
-  background-image: url("./img/ds.jpg");
-}
-
-/* Overlay */
 .overlay {
-  background: rgba(0, 0, 0, 0.932);
-  padding: 25px 30px;
-  border-radius: 8px;
-  max-width: 500px;
-}
-
-/* ================== ESTILOS INDIVIDUAIS ================== */
-
-/* --- Azul para Redes --- */
-.redes .overlay {
-  border-left: 3px solid #4fc3f7;
-}
-.redes h1 {
-  color: #4fc3f7;
-}
-.redes h2 {
-  color: #81d4fa;
-}
-.redes ul li a {
-  border: 1px solid #4fc3f7;
-}
-.redes ul li a:hover {
-  background: #4fc3f7;
-  color: #000;
-}
-
-/* --- Vermelho para Desenvolvimento --- */
-.dev .overlay {
-  border-left: 3px solid #ff7043;
-}
-.dev h1 {
-  color: #ff7043;
-}
-.dev h2 {
-  color: #ffab91;
-}
-.dev ul li a {
-  border: 1px solid #ff7043;
-}
-.dev ul li a:hover {
-  background: #ff7043;
-  color: #000;
-}
-
-/* ========================================================= */
-
-/* Listas */
-ul {
-  list-style: none;
-  margin-bottom: 12px;
-}
-
-ul li {
-  margin: 6px 0;
-}
-
-ul li a {
-  text-decoration: none;
-  color: #e0e0e0;
-  padding: 6px 12px;
-  border-radius: 6px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-/* ----- EFEITO DE HOVER ----- */
-.redes:hover {
-  transform: scale(1.05);
-  filter: brightness(1.2);
+  background: transparent;
+  padding: 0;
+  border: none;
+  backdrop-filter: none;
+  position: relative;
   z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
-.redes:hover ~ .dev {
-  filter: brightness(0.5);
+
+.overlay h1 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  color: #569cd6;
+  font-weight: bold;
+  border-bottom: 1px solid #3e3e42;
+  padding-bottom: 10px;
+}
+
+.overlay h2 {
+  font-size: 0.85em;
+  color: #7cb342;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+}
+
+.overlay hr {
+  border: none;
+  border-top: 1px solid #3e3e42;
+  margin: 8px 0;
+}
+
+.overlay p {
+  font-size: 0.75em;
+  color: #858585;
+  margin: 3px 0;
+}
+
+/* Colunas para 1º e 2º Ano */
+.year-columns {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Cursos superiores: colunas uma embaixo da outra */
+.secao.superior .year-columns {
+  flex-direction: column;
+}
+
+/* Cursos inferiores: colunas uma embaixo da outra */
+.secao.inferior .year-columns {
+  flex-direction: column;
+}
+
+.year-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.year-column h2 {
+  font-size: 0.8em;
+  margin: 8px 0 4px 0;
+}
+
+.year-column ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.year-column ul li {
+  margin: 2px 0;
+}
+
+.year-column ul li a {
+  font-size: 0.75em;
+  padding: 4px 6px;
+  display: block;
+  color: #d4d4d4;
+  border: 1px solid #3e3e42;
+  background: #252526;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  border-radius: 2px;
+}
+
+.year-column ul li a:hover {
+  background: #2d2d2d;
+  border-color: #007acc;
+  color: #ffffff;
+  box-shadow: inset 0 0 5px rgba(0, 122, 204, 0.2);
+}
+
+/* Estilo específico dos cursos */
+.dev {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2d1b2e 100%);
+  border-color: #c586c0;
 }
 
 .dev:hover {
-  transform: scale(1.05);
-  filter: brightness(1.2);
-  z-index: 2;
+  border-color: #d7a7d7;
+  box-shadow: inset 0 0 10px rgba(197, 134, 192, 0.15);
 }
-.container:hover .redes:not(:hover) {
-  filter: brightness(0.5);
+
+.dev h1 {
+  color: #c586c0;
+  border-bottom-color: #3e2940;
+}
+
+.dev h2 {
+  color: #d7a7d7;
+}
+
+.dev .year-column ul li a {
+  border-color: #3e2940;
+  background: #252529;
+}
+
+.dev .year-column ul li a:hover {
+  background: #2d2d31;
+  border-color: #c586c0;
+}
+
+.redes {
+  background: linear-gradient(135deg, #1e1e1e 0%, #1b2e2d 100%);
+  border-color: #4ac4dc;
+}
+
+.redes:hover {
+  border-color: #7dd4e8;
+  box-shadow: inset 0 0 10px rgba(74, 196, 220, 0.15);
+}
+
+.redes h1 {
+  color: #4ac4dc;
+  border-bottom-color: #243e3d;
+}
+
+.redes h2 {
+  color: #7dd4e8;
+}
+
+.redes .year-column ul li a {
+  border-color: #243e3d;
+  background: #252529;
+}
+
+.redes .year-column ul li a:hover {
+  background: #2d2d31;
+  border-color: #4ac4dc;
+}
+
+.info {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2b1b2e 100%);
+  border-color: #c586c0;
+}
+
+.info:hover {
+  border-color: #d7a7d7;
+}
+
+.info h1 {
+  color: #c586c0;
+  border-bottom-color: #3e2940;
+}
+
+.info ul li a {
+  border-color: #3e2940;
+  background: #252529;
+  font-size: 0.7em;
+}
+
+.info ul li a:hover {
+  background: #2d2d31;
+  border-color: #c586c0;
+}
+
+.adm {
+  background: linear-gradient(135deg, #1e1e1e 0%, #1b2e1f 100%);
+  border-color: #5fb77f;
+}
+
+.adm:hover {
+  border-color: #7dd496;
+}
+
+.adm h1 {
+  color: #5fb77f;
+  border-bottom-color: #254428;
+}
+
+.adm ul li a {
+  border-color: #254428;
+  background: #252529;
+  font-size: 0.7em;
+}
+
+.adm ul li a:hover {
+  background: #2d2d31;
+  border-color: #5fb77f;
+}
+
+.com {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2e2b1b 100%);
+  border-color: #dcdcaa;
+}
+
+.com:hover {
+  border-color: #e5e5b8;
+}
+
+.com h1 {
+  color: #dcdcaa;
+  border-bottom-color: #443d25;
+}
+
+.com ul li a {
+  border-color: #443d25;
+  background: #252529;
+  font-size: 0.7em;
+}
+
+.com ul li a:hover {
+  background: #2d2d31;
+  border-color: #dcdcaa;
+}
+
+/* MODAL PARA FORMULÁRIOS */
+.modal-formulario {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content-formulario {
+  background-color: #1e1e1e;
+  border: 1px solid #3e3e42;
+  border-radius: 4px;
+  width: 90%;
+  height: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header-formulario {
+  background: #252526;
+  border-bottom: 1px solid #3e3e42;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title-formulario {
+  color: #569cd6;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.modal-close-formulario {
+  background: none;
+  border: none;
+  color: #858585;
+  font-size: 1.8em;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close-formulario:hover {
+  color: #ffffff;
+  background: #3e3e42;
+}
+
+.modal-iframe {
+  flex: 1;
+  border: none;
+  background: white;
+}
+
+/* Scrollbars estilo VS Code */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #464647;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5f5f5f;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .overlay h1 {
+    font-size: 1.1em;
+  }
+
+  .year-columns {
+    gap: 10px;
+  }
+
+  .year-column ul li a {
+    font-size: 0.7em;
+    padding: 3px 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.4em;
+  }
+
+  .overlay h1 {
+    font-size: 1em;
+  }
+
+  .year-column ul li a {
+    font-size: 0.65em;
+  }
+
+  .modal-content-formulario {
+    width: 95%;
+    height: 95%;
+  }
 }

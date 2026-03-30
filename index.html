@@ -3,69 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Provas 4º Bimestre - Cursos Eixo de TI - EEEP Deputado Roberto Mesquita</title>
+  <title>Provas EEEP Deputado Roberto Mesquita</title>
   <link rel="stylesheet" href="./src/style.css">
   <!-- Fonte moderna/tecnológica -->
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- HEADER COM TÍTULO -->
+  <header class="game-header">
+    <div class="header-content">
+      <h1 class="game-title">PROVAS</h1>
+      <p class="header-subtitle">EEEP Deputado Roberto Mesquita</p>
+      <div class="header-line"></div>
+      <p class="header-instruction">Selecione seu curso abaixo</p>
+    </div>
+  </header>
+
   <div class="container">
+    <!-- SEÇÃO SUPERIOR - 2 Cursos -->
+    <div class="secao superior">
+      <!-- Desenvolvimento de Sistemas -->
+      <section class="lado dev">
+        <div class="overlay">
+          <h1>Desenvolvimento de Sistemas</h1>
 
-    <!-- Redes de Computadores -->
-    <section class="lado redes">
-      <div class="overlay">
-        <h1>Redes de Computadores</h1>
+          <div class="year-columns">
+            <div class="year-column">
+              <h2>1º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/ceLorEB3Fn6e7S8n8', 'Planejamento de Carreira')">Planejamento de Carreira</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/Q7fWRHpTKE3QDsSo9', 'Lógica de Programação')">Lógica de Programação</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/DEU3beYS2UVKu5v27', 'Arquitetura e Manutenção')">Arquitetura e Manutenção</a></li>
+              </ul>
+            </div>
 
-        <h2>1º Ano</h2>
-        <ul>
-          <li><a href="https://forms.gle/e3bigFMb2Bv4vNjw8" target="_blank">Sistema Operacional Livre</a></li>
-          <li><a href="https://forms.gle/GbDkjUJ5iJk1TeYH7" target="_blank">Rede de Computadores</a></li>
-          <li><a href="https://forms.gle/qny1hq9YE5pbyjRB7" target="_blank">Arquitetura e Manutenção</a></li>
-          <li><a href="https://forms.gle/ELMF6whaMxUaRXEUA" target="_blank">Lógica de Programação FINAL</a></li>
-        </ul>
+            <div class="year-column">
+              <h2>2º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/oqTvc2QiprXhPGyd7', 'Segurança da Informação')">Segurança da Informação</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/YCANqGaihcWdkQZY8', 'Programação Orientada a Objetos')">Programação Orientada a Objetos</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/PsMPD2ZothYoTEP9A', 'Sistemas Embarcados')">Sistemas Embarcados</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/6UtUQogLQUsDfA8f9', 'Gestão de Startup II')">Gestão de Startup II</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/zjuHYWH95QG1uEDXA', 'Rede de Computadores')">Rede de Computadores</a></li>
+              </ul>
+            </div>
+          </div>
 
-        <h2>2º Ano</h2>
-        <ul>
-          <li><a href="https://forms.gle/gBDaCrtVKfjWk5zq6" target="_blank">Segurança de Servidores</a></li>
-          <li><a href="https://forms.gle/7hAdy8GiG5C6nfVk6" target="_blank">Administração de Servidores</a></li>
-          <li><a href="https://forms.gle/E8kj1TyRDe4ADs1o6" target="_blank">Gerência de Projetos</a></li>
-          <li><a href="#" style="background-color: gray;">Cabeamento Estruturado - NÃO HÁ PROVA!</a></li>
-          <li><a href="https://forms.gle/HggAQ2Zyk6yQhkYn6" target="_blank">Gestão de Startup II</a></li>
-        </ul>
-        <hr><br>
-        <p>Observações:</p> 
-        <p>- Utilize a aba anônima para sua segurança!</p>
-        <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
-      </div>
-    </section>
+          <hr><br>
+          <p>Observações:</p> 
+          <p>- Utilize a aba anônima para sua segurança!</p>
+          <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
+        </div>
+      </section>
 
-    <!-- Desenvolvimento de Sistemas -->
-    <section class="lado dev">
-      <div class="overlay">
-        <h1>Desenvolvimento de Sistemas</h1>
+      <!-- Redes de Computadores -->
+      <section class="lado redes">
+        <div class="overlay">
+          <h1>Redes de Computadores</h1>
 
-        <h2>1º Ano</h2>
-        <ul>
-          <li><a href="https://forms.gle/ceLorEB3Fn6e7S8n8" target="_blank">Planejamento de Carreira</a></li>
-          <li><a href="https://forms.gle/Q7fWRHpTKE3QDsSo9" target="_blank">Lógica de Programação</a></li>
-          <li><a href="https://forms.gle/DEU3beYS2UVKu5v27" target="_blank">Arquitetura e Manutenção</a></li>
-        </ul>
+          <div class="year-columns">
+            <div class="year-column">
+              <h2>1º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/e3bigFMb2Bv4vNjw8', 'Sistema Operacional Livre')">Sistema Operacional Livre</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/GbDkjUJ5iJk1TeYH7', 'Rede de Computadores')">Rede de Computadores</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/qny1hq9YE5pbyjRB7', 'Arquitetura e Manutenção')">Arquitetura e Manutenção</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/ELMF6whaMxUaRXEUA', 'Lógica de Programação FINAL')">Lógica de Programação FINAL</a></li>
+              </ul>
+            </div>
 
-        <h2>2º Ano</h2>
-        <ul>
-          <li><a href="https://forms.gle/PecDhqUMPNhdrZys9" target="_blank">Segurança da Informação</a></li>
-          <li><a href="https://forms.gle/YCANqGaihcWdkQZY8" target="_blank">Programação Orientada a Objetos</a></li>
-          <li><a href="https://forms.gle/PsMPD2ZothYoTEP9A" target="_blank">Sistemas Embarcados</a></li>
-          <li><a href="https://forms.gle/6UtUQogLQUsDfA8f9" target="_blank">Gestão de Startup II</a></li>
-          <li><a href="https://forms.gle/zjuHYWH95QG1uEDXA" target="_blank">Rede de Computadores</a></li>
-        </ul>
-        <hr><br>
-        <p>Observações:</p> 
-        <p>- Utilize a aba anônima para sua segurança!</p>
-        <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
-      </div>
-    </section>
+            <div class="year-column">
+              <h2>2º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/gBDaCrtVKfjWk5zq6', 'Segurança de Servidores')">Segurança de Servidores</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/7hAdy8GiG5C6nfVk6', 'Administração de Servidores')">Administração de Servidores</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/E8kj1TyRDe4ADs1o6', 'Gerência de Projetos')">Gerência de Projetos</a></li>
+                <li><a href="#" style="background-color: gray;">Cabeamento Estruturado - NÃO HÁ PROVA!</a></li>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/HggAQ2Zyk6yQhkYn6', 'Gestão de Startup II')">Gestão de Startup II</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <hr><br>
+          <p>Observações:</p> 
+          <p>- Utilize a aba anônima para sua segurança!</p>
+          <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- SEÇÃO INFERIOR - 3 Cursos -->
+    <div class="secao inferior">
+      <!-- Informática -->
+      <section class="lado info">
+        <div class="overlay">
+          <h1>Informática</h1>
+
+          <div class="year-columns">
+            <div class="year-column">
+              <h2>1º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/ABC123example', 'Informática Básica')">Informática Básica</a></li>
+              </ul>
+            </div>
+
+            <div class="year-column">
+              <h2>2º Ano</h2>
+              <ul>
+              </ul>
+            </div>
+          </div>
+
+          <hr><br>
+          <p>Observações:</p> 
+          <p>- Utilize a aba anônima para sua segurança!</p>
+          <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
+        </div>
+      </section>
+
+      <!-- Administração -->
+      <section class="lado adm">
+        <div class="overlay">
+          <h1>Administração</h1>
+
+          <div class="year-columns">
+            <div class="year-column">
+              <h2>1º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/ADM001example', 'Informática Básica')">Informática Básica</a></li>
+              </ul>
+            </div>
+
+            <div class="year-column">
+              <h2>2º Ano</h2>
+              <ul>
+              </ul>
+            </div>
+          </div>
+
+          <hr><br>
+          <p>Observações:</p> 
+          <p>- Utilize a aba anônima para sua segurança!</p>
+          <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
+        </div>
+      </section>
+
+      <!-- Comércio -->
+      <section class="lado com">
+        <div class="overlay">
+          <h1>Comércio</h1>
+
+          <div class="year-columns">
+            <div class="year-column">
+              <h2>1º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/COM001example', 'Informática Básica')">Informática Básica</a></li>
+              </ul>
+            </div>
+
+            <div class="year-column">
+              <h2>2º Ano</h2>
+              <ul>
+              </ul>
+            </div>
+          </div>
+
+          <hr><br>
+          <p>Observações:</p> 
+          <p>- Utilize a aba anônima para sua segurança!</p>
+          <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
+        </div>
+      </section>
+    </div>
 
   </div>
+
+  <!-- MODAL PARA FORMULÁRIOS -->
+  <div id="formularioModal" class="modal-formulario">
+    <div class="modal-content-formulario">
+      <div class="modal-header-formulario">
+        <span id="modalTitle" class="modal-title-formulario"></span>
+        <button class="modal-close-formulario" onclick="fecharFormulario()">&times;</button>
+      </div>
+      <iframe id="formularioIframe" class="modal-iframe" src="" frameborder="0" allow="camera; microphone; payment; usb" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    function abrirFormulario(url, titulo) {
+      // Adicionar ?embedded=true ao URL se for um formulário Google
+      if (url.includes('forms.gle') || url.includes('docs.google.com/forms')) {
+        if (!url.includes('?')) {
+          url += '?embedded=true';
+        } else if (!url.includes('embedded=true')) {
+          url += '&embedded=true';
+        }
+      }
+      document.getElementById('modalTitle').textContent = titulo;
+      document.getElementById('formularioIframe').src = url;
+      document.getElementById('formularioModal').style.display = 'flex';
+    }
+
+    function fecharFormulario() {
+      document.getElementById('formularioModal').style.display = 'none';
+      document.getElementById('formularioIframe').src = '';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('formularioModal');
+      if (event.target == modal) {
+        fecharFormulario();
+      }
+    }
+  </script>
 </body>
 </html>
