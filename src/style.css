@@ -209,21 +209,21 @@ html, body {
 /* Estilo específico dos cursos */
 .dev {
   background: linear-gradient(135deg, #1e1e1e 0%, #2d1b2e 100%);
-  border-color: #c586c0;
+  border-color: #c58686;
 }
 
 .dev:hover {
-  border-color: #d7a7d7;
+  border-color: #d7a7a7;
   box-shadow: inset 0 0 10px rgba(197, 134, 192, 0.15);
 }
 
 .dev h1 {
-  color: #c586c0;
+  color: #c58686;
   border-bottom-color: #3e2940;
 }
 
 .dev h2 {
-  color: #d7a7d7;
+  color: #d7a7a7;
 }
 
 .dev .year-column ul li a {

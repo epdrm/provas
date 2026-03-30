@@ -1,0 +1,83 @@
+<!-- SEÇÃO INFERIOR - 3 Cursos -->
+    <div class="secao inferior">
+      <!-- Informática -->
+      <section class="lado info">
+        <div class="overlay">
+          <h1>Informática</h1>
+
+          <div class="year-columns">
+            <div class="year-column">
+              <h2>1º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/ABC123example', 'Informática Básica')">Informática Básica</a></li>
+              </ul>
+            </div>
+
+            <div class="year-column">
+              <!-- <h2>2º Ano</h2> -->
+              <ul>
+              </ul>
+            </div>
+          </div>
+
+          <hr><br>
+          <p>Observações:</p> 
+          <p>- Utilize a aba anônima para sua segurança!</p>
+          <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
+        </div>
+      </section>
+
+      <!-- Administração -->
+      <section class="lado adm">
+        <div class="overlay">
+          <h1>Administração</h1>
+
+          <div class="year-columns">
+            <div class="year-column">
+              <h2>1º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/ADM001example', 'Informática Básica')">Informática Básica</a></li>
+              </ul>
+            </div>
+
+            <div class="year-column">
+              <!-- <h2>2º Ano</h2> -->
+              <ul>
+              </ul>
+            </div>
+          </div>
+
+          <hr><br>
+          <p>Observações:</p> 
+          <p>- Utilize a aba anônima para sua segurança!</p>
+          <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
+        </div>
+      </section>
+
+      <!-- Comércio -->
+      <section class="lado com">
+        <div class="overlay">
+          <h1>Comércio</h1>
+
+          <div class="year-columns">
+            <div class="year-column">
+              <h2>1º Ano</h2>
+              <ul>
+                <li><a href="#" onclick="abrirFormulario('https://forms.gle/COM001example', 'Informática Básica')">Informática Básica</a></li>
+              </ul>
+            </div>
+
+            <div class="year-column">
+              <!-- <h2>2º Ano</h2> -->
+              <ul>
+              </ul>
+            </div>
+          </div>
+
+          <hr><br>
+          <p>Observações:</p> 
+          <p>- Utilize a aba anônima para sua segurança!</p>
+          <p>- É necessário utilizar sua conta institucional para fazer as provas.</p>
+        </div>
+      </section>
+    </div>
